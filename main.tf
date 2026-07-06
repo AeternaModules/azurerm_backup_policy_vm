@@ -4,6 +4,7 @@ resource "azurerm_backup_policy_vm" "backup_policy_vms" {
   name                           = each.value.name
   recovery_vault_name            = each.value.recovery_vault_name
   resource_group_name            = each.value.resource_group_name
+  consistency_type               = each.value.consistency_type
   instant_restore_retention_days = each.value.instant_restore_retention_days
   policy_type                    = each.value.policy_type
   timezone                       = each.value.timezone

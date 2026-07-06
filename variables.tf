@@ -12,6 +12,7 @@ Required:
         - time (required)
         - weekdays (optional)
 Optional:
+    - consistency_type
     - instant_restore_retention_days
     - policy_type
     - timezone
@@ -47,6 +48,7 @@ EOT
     name                           = string
     recovery_vault_name            = string
     resource_group_name            = string
+    consistency_type               = optional(string)
     instant_restore_retention_days = optional(number)
     policy_type                    = optional(string) # Default: "V1"
     timezone                       = optional(string) # Default: "UTC"

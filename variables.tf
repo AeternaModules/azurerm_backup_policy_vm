@@ -50,8 +50,8 @@ EOT
     resource_group_name            = string
     consistency_type               = optional(string)
     instant_restore_retention_days = optional(number)
-    policy_type                    = optional(string) # Default: "V1"
-    timezone                       = optional(string) # Default: "UTC"
+    policy_type                    = optional(string)
+    timezone                       = optional(string)
     backup = object({
       frequency     = string
       hour_duration = optional(number)
@@ -69,7 +69,7 @@ EOT
     retention_monthly = optional(object({
       count             = number
       days              = optional(set(number))
-      include_last_days = optional(bool) # Default: false
+      include_last_days = optional(bool)
       weekdays          = optional(set(string))
       weeks             = optional(set(string))
     }))
@@ -80,7 +80,7 @@ EOT
     retention_yearly = optional(object({
       count             = number
       days              = optional(set(number))
-      include_last_days = optional(bool) # Default: false
+      include_last_days = optional(bool)
       months            = set(string)
       weekdays          = optional(set(string))
       weeks             = optional(set(string))
